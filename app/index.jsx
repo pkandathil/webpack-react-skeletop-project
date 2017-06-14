@@ -1,14 +1,15 @@
 import _ from 'lodash';
 import './index.scss';
-function component () {
-  var moment = require('moment');
-  console.log(moment().format());
-  var element = document.createElement('div');
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack'], ' ');
-
-  return element;
+class Hello extends React.Component {
+  render() {
+    var moment = require('moment');
+    console.log(moment().format());
+    return (
+      <h1> Hello World </h1>
+    );
+  }
 }
 
-document.body.appendChild(component());
+
+export default Hello;

@@ -10,6 +10,9 @@ module.exports = {
   output: {
       filename: '[name].js',
       path: __dirname + "/dist",
+      devtoolLineToLine: true,
+      library: "ComponentLibrary",
+      libraryTarget: "window"
   },
   module: {
     rules: [
