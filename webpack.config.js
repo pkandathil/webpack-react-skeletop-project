@@ -5,11 +5,14 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   context: __dirname + "/app",
   entry: {
-    main: __dirname + '/app/main.js'
+    bundle: __dirname + '/app/main.jsx'
   },
   output: {
       filename: '[name].js',
       path: __dirname + "/dist",
+      devtoolLineToLine: true,
+      library: "MITSComponentLibrary",
+      libraryTarget: "window"
   },
   module: {
     rules: [
